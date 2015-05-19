@@ -588,7 +588,7 @@ void MPI_Get_globals() {
 
 void MPI_Init(string[] args) {
   // Convert arguments to C form
-  int argc = args.length;
+  int argc = cast(int)args.length;
   char** argv = cast(char**) array(map!toStringz(args)).ptr;
 
   // Call C function
